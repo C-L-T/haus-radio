@@ -20,15 +20,15 @@ $$(document).on('deviceready', function() {
     })
 
     // Audio
-    $('#playButton').click(function() {
+    $('.playButton').click(function() {
         myApp.alert("Now Playing: "+songArtist+" - "+songTitle, "Haus Radio");
         if($('#player').prop("paused") == false) {
             $('#player').trigger("pause");
-            $('#playButton').text("play");
+            $('.playButton').text("play_fill");
             myApp.alert("Paused");
         } else {
             $('#player').trigger("play")
-            $('#playButton').text("pause");
+            $('.playButton').text("pause_fill");
             myApp.alert("Playing");
         }
     })
@@ -41,14 +41,21 @@ $$(document).on('deviceready', function() {
         $.getJSON( "http://admin.hausradio.co.uk/api/nowplaying", function(data){
             var songData = data[0]['now_playing']['song'];
             var songHistory = data[0]['song_history'];
+            var songNext = data[0]['playing_next']['song'];
             if ((songData['id'] != songID)) {
                 songID = songData['id'];
                 songArtist = songData['artist'];
                 songTitle = songData['title'];
                 songArt = songData['art'];
-                $('#song-artist').text(songArtist);
-                $('#song-title').text(songTitle);
+                songTitleNext = songNext['title'];
+                songArtistNext = songNext['artist'];
+                songArtNext = songNext['art'];
+                $('.song-artist').text(songArtist);
+                $('.song-title').text(songTitle);
                 $('#now-playing-image').attr("src", songArt);
+                $('#songTitleNext').text(songTitleNext);
+                $('#songArtistNext').text(songArtistNext);
+                $('#songArtNext').attr("src", songArtNext);
 
                 //pollTime = data[0]['now_playing']['remaining']+"000"; //production
                 console.log(songArtist);
@@ -59,7 +66,7 @@ $$(document).on('deviceready', function() {
             }
             else {
                 setTimeout(poll, 1000);
-                $('#now-playing-image').attr("src", songArt); 
+                $('#now-playing-image').attr("src", songArt);
             }
         });
     }

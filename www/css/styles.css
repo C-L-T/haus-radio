@@ -19,6 +19,117 @@ img {
     background: #000000;
 }
 
+.now-playing-container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.now-playing-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 5px black;
+}
+
+.now-playing-bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.on-air-label {
+  padding: 8px;
+  background-color: #f44336;
+  color: white;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.artist-wrapper {
+  text-shadow: 1px 1px 5px black;
+}
+
+.np-grad-overlay {
+  display: inline-block;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5270483193277311) 0%, rgba(255,255,255,0) 53%);
+}
+
+.np-art {
+  position: relative;
+  display: block;
+  z-index: -1;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.size-56 {
+  font-size: 56px;
+}
+
+.social-col {
+  padding: 10px;
+  text-align: center !important;
+  box-shadow: 1px 1px 5px grey;
+}
+
 #player {
     display: none;
+}
+
+#npWrap {
+  padding-left: 10px;
+}
+
+#socialBlock {
+  padding-bottom: 20px;
+}
+
+#facebookCol {
+  background-color: #3b5998;
+}
+
+#twitterCol {
+  background-color: #38A1F3;
+}
+
+#instagramCol {
+  background-color: #e95950;
+}
+
+#songArtistBar {
+  font-weight: bold !important;
+}
+
+#upNextBlock {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  /* box-shadow: 3px 3px 5px grey; */
+  width: 100%;
+}
+
+#sponsorBlock {
+  /* padding-top: 10px; */
+  padding-bottom: 8px;
+  /* border-bottom: 1px solid grey; */
+}
+
+#songArtNext {
+  box-shadow: 3px 3px 5px grey;
+}
+
+#sponsorImage {
+  box-shadow: 1px 1px 5px grey;
+  width: 100%;
+  height: auto;
+}
+
+#playButtonNav {
+  padding-left: 7px;
+  border-left: 1px solid grey;
 }

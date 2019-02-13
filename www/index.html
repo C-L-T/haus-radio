@@ -29,8 +29,8 @@
 
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -44,7 +44,7 @@
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
         <div class="content-block">
-            <p>Left panel content goes here</p>
+            <p>We're working on it!</p>
         </div>
     </div>
 
@@ -72,27 +72,94 @@
                 <div data-page="index" class="page">
                     <!-- Scrollable page content -->
                     <div class="page-content">
-                        <div class="content-block">
-                            <h1>Welcome to Haus Radio!</h1>
-                            <!-- Link to another page -->
-                            <a href="listen.html">Listen</a>
+                      <h3>Secret Message</h3>
+                        <div class="row no-gap">
+                            <div class="col-100">
+                              <div class="now-playing-container np-grad-overlay">
+                                <img class="np-art" src="http://admin.hausradio.co.uk/static/img/generic_song.jpg" id="now-playing-image">
+                                <div class="now-playing-center ">
+                                  <i class="f7-icons color-white size-56 playButton">play_fill</i>
+                                </div>
+                                <div class="now-playing-bottom-left">
+                                  <div class="content-block">
+                                    <div class="row">
+                                      <h3 class="on-air-label">ON AIR NOW</h3>
+                                    </div>
+                                    <div class="row text-align-left">
+                                      <h3 class="text-white">
+                                        <span class="song-artist">Buffering...</span>
+                                         -
+                                        <span class="song-title"></span>
+                                      </h3>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="bg-white" id="upNextBlock">
+                              <div class="row no-gap">
+                                  <div class="col-25">
+                                      <img src="http://admin.hausradio.co.uk/static/img/generic_song.jpg" id="songArtNext">
+                                  </div>
+                                  <div class="col-50">
+                                    <b>
+                                      <span id="songTitleNext">Buffering...</span>
+                                    </b>
+                                    <br>
+                                    <span id="songArtistNext">Buffering...</span>
+                                  </div>
+                                  <div class="col">
+                                    <div class="row">
+                                      <h3 class="on-air-label">UP NEXT</h3>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block bg-white" id="sponsorBlock">
+                          <div class="row">
+                            <a href="https://www.facebook.com/mojunkydesign/">
+                              <img id="sponsorImage" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/26730716_1463149787117433_5750804365709974249_n.png?_nc_cat=109&_nc_ht=scontent-lht6-1.xx&oh=42ade19420289ba6e06508974ac6d855&oe=5CDB73A5" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="content-block bg-white" id="socialBlock">
+                          <h3>Follow Us</h3>
+                          <div class="row">
+                            <div class="col-33 social-col" id="facebookCol">
+                              <a href="https://www.facebook.com/hausradiolive/">
+                                <i class="f7-icons text-white">logo_facebook</i>
+                              </a>
+                            </div>
+                            <div class="col-33 social-col" id="twitterCol">
+                              <i class="f7-icons text-white">logo_twitter</i>
+                            </div>
+                            <div class="col-33 social-col" id="instagramCol">
+                              <i class="f7-icons text-white">logo_instagram</i>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Bottom Toolbar--> 
+            <!-- Bottom Toolbar-->
             <div class="toolbar">
                 <div class="toolbar-inner">
-                    <!-- Toolbar links -->
-                    <small class="scroll-text">
-                        <span id="song-artist"></span>
-                         -
-                        <span id="song-title"></span>
-                    </small>         
-                    <!-- <a href="#" class="link">Link 2</a> -->
+                  <div id="npWrap">
+                    <small>
+                        <b>
+                          <span class="song-artist" id="songArtistBar"></span>
+                        </b>
+                        <br>
+                        <span class="song-title"></span>
+                    </small>
+                  </div>
                     <div>
                         <a href="#" class="link">
-                            <i class="f7-icons" id="playButton">play</i>
+                            <i class="f7-icons playButton" id="playButtonNav">play_fill</i>
                         </a>
                     </div>
                 </div>
